@@ -1,0 +1,22 @@
+var findP = function(word) {
+
+    //start and end ID;
+    var s = 0;
+    var e = word.length - 1;
+    
+    while (s <= word.length / 2 && 
+           e >= Math.floor(word.length / 2) &&
+           word[s].toLowerCase() === word[e].toLowerCase()) {
+        s++;
+        e--;
+    }
+    
+    if (e - s <= 1) {
+        return true;
+    } else {
+        return false;
+    }
+    
+};
+
+console.log(findP('Rebebabbbbbbbbeber'));
